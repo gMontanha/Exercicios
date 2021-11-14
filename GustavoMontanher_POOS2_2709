@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.aulaum;
+import java.util.Scanner;
+
+
+public class NewClass {
+    public static void main(String[] args) {
+        int horaQuantidade, horaValor;
+        double INSS, IR, salarioBruto, salarioLiquido, descontoTotal;
+        
+        System.out.println("Quantidade de horas: ");
+        Scanner a = new Scanner(System.in);
+        horaQuantidade = a.nextInt();
+        
+        System.out.println("Quanto ganha por hora: ");
+        Scanner b = new Scanner(System.in);
+        horaValor = b.nextInt();
+            
+        System.out.println("Desconto do INSS: ");
+        Scanner c = new Scanner(System.in);
+        INSS = c.nextDouble();
+        
+        System.out.println("Desconto do Imposto de Renda: ");
+        Scanner d = new Scanner(System.in);
+        IR = d.nextDouble();
+        
+        salarioBruto = horaQuantidade*horaValor;
+        descontoTotal = INSS+IR;
+        salarioLiquido = salarioBruto-((salarioBruto*descontoTotal)/100);
+        
+        System.out.println("Salário Bruto = R$"+salarioBruto);
+        System.out.println("Desconto total = "+descontoTotal+"%");
+        System.out.println("Salario Líquido = R$"+salarioLiquido);
+        
+       
+}
+}
